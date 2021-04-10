@@ -33,7 +33,7 @@ public class Rectangle extends TwoDimShape {
 	}
 	
 	// Constructors
-	Rectangle(int x, int y, int l, int w, Color c){
+	public Rectangle(int x, int y, int l, int w, Color c){
 		super.setCenterX(x);
 		super.setCenterY(y);
 		super.setColor(c);
@@ -42,7 +42,7 @@ public class Rectangle extends TwoDimShape {
 		
 	}
 	
-    Rectangle(int x, int y, int l, int w){
+    public Rectangle(int x, int y, int l, int w){
 		super.setCenterX(x);
 		super.setCenterY(y);
 		super.setColor(Color.white);
@@ -57,7 +57,7 @@ public class Rectangle extends TwoDimShape {
 	}
 
 	@Override
-	public void paintComponent(Graphics g) {
+	public void paint(Graphics g) {
 	     Graphics2D g2d = (Graphics2D) g;
 	     g2d.setColor(super.getColor());
 	     g2d.fillRect(getCenterX(), getCenterY(), length, width);

@@ -40,28 +40,28 @@ public abstract class Shape extends Component{
 		
 	
 	// Define abstract methods of all Shapes
-	public abstract void paintComponent(Graphics g); // Draw component when added to frame
+	public abstract void paint(Graphics g); // Draw component when added to frame
 	public abstract double getParameter(); // Calculate shape parameter 
 	public abstract void resize(int factor); // Resize by a factor (in percent)
 	
 	// Define general motion methods of all shapes
-	public void goUp(){
-		centerY = centerY + 1; 
+	public void goUp(int steps){
+		centerY = centerY - steps; 
 		repaint(); 
 	}
 	
-	public void goDown(){
-		centerY = centerY - 1;
+	public void goDown(int steps){
+		centerY = centerY + steps;
 		repaint(); 
 	}
 	
-	public void goRight(){
-		centerX = centerX + 1;
+	public void goRight(int steps){
+		centerX = centerX + steps;
 		repaint(); 
 	}
 	
-	public void goLeft(){
-		centerX = centerX - 1;
+	public void goLeft(int steps){
+		centerX = centerX - steps;
 		repaint(); 
 	}
 	

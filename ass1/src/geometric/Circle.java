@@ -25,7 +25,7 @@ public class Circle extends TwoDimShape {
 	}
 	
 	// Constructors
-	Circle(int x, int y, int r, Color c){
+	public Circle(int x, int y, int r, Color c){
 		super.setCenterX(x);
 		super.setCenterY(y);
 		super.setColor(c);
@@ -33,7 +33,7 @@ public class Circle extends TwoDimShape {
 		
 	}
 	
-    Circle(int x, int y, int r){
+    public Circle(int x, int y, int r){
 		super.setCenterX(x);
 		super.setCenterY(y);
 		super.setColor(Color.white);
@@ -48,7 +48,7 @@ public class Circle extends TwoDimShape {
 	}
 
 	@Override
-	public void paintComponent(Graphics g) {
+	public void paint(Graphics g) {
 	     Graphics2D g2d = (Graphics2D) g;
 	     g2d.setColor(super.getColor());
 	     g2d.fillOval(getCenterX(), getCenterY(), radius, radius);

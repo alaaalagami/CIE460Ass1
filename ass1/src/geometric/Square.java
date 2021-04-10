@@ -24,7 +24,7 @@ public class Square extends TwoDimShape {
 	}
 	
 	// Constructors
-	Square(int x, int y, int s, Color c){
+	public Square(int x, int y, int s, Color c){
 		super.setCenterX(x);
 		super.setCenterY(y);
 		super.setColor(c);
@@ -32,7 +32,7 @@ public class Square extends TwoDimShape {
 		
 	}
 	
-    Square(int x, int y, int s){
+    public Square(int x, int y, int s){
 		super.setCenterX(x);
 		super.setCenterY(y);
 		super.setColor(Color.white);
@@ -47,7 +47,7 @@ public class Square extends TwoDimShape {
 	}
 
 	@Override
-	public void paintComponent(Graphics g) {
+	public void paint(Graphics g) {
 	     Graphics2D g2d = (Graphics2D) g;
 	     g2d.setColor(super.getColor());
 	     g2d.fillRect(getCenterX(), getCenterY(), side, side);
